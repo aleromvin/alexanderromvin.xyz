@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+{% include head.html %}
+
+    <body>
+
+        {% include banner.html %}
+        {% include banner-alt.html %}
+
+        <main class="fancy-outline">
+
+            <article>
+                <h1 class="title-heading">
+                    {% if page.title-heading %}
+                        {{ page.title-heading }}
+                    {% else %}
+                        {{ page.title }}
+                    {% endif %}
+                </h1>
+
+
+                <div class="post-details">
+                    <h2 class="post-date">
+                        {% if page.language == "en" %}
+                            {{ page.date | date_to_long_string }}
+                        {% else %}
+                            {% capture date-alternative %}
+                                {{ page.date | date: "%d" }}
+                                {% assign m = page.date | date: "%m" | minus: 1 %}
+                                {{ site.data.months[page.language][m] }}
+                                {{ page.date | date: "%Y" }}
+                            {% endcapture %}
+                            {{ date-alternative }}
+                        {% endif %}
+                    </h2>
+
+                    <ul class="post-translations">
+                        {% assign translations = site.posts | where_exp:"item","page.refname == item.refname and item.language != page.language" %}
+                        {% for item in translations %}
+                            <li><a href="{{ item.url }}">{{ site.data.translation-tweaks[item.language].name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+
+                <hr>
+                {{ content }}
+            </article>
+
+            {% include social.html %}
+
+        </main>
+
+    </body>
+
+</html>

@@ -1,0 +1,16 @@
+disclaimer:
+  en: "My online presence"
+  es: "Mi presencia en las redes"
+
+items:
+  - class: github-logo
+    name:
+      en: Github
+      es: Github
+    link: https://github.com/aleromvin
+  
+  - class: linkedin-logo
+    name:
+      en: "That awful website (LinkedIn)"
+      es: "Esa página horrible (LinkedIn)"
+    link: https://www.linkedin.com/in/alexander-romero-vinogradov-b94a60221/

@@ -1,0 +1,7 @@
+- language: en
+  url-infix: /
+  name: English
+
+- language: es
+  url-infix: /pages-translations/es/
+  name: Español

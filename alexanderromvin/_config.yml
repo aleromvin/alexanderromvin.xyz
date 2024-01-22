@@ -1,0 +1,22 @@
+---
+---
+
+# Plugins
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Configuration
+
+paginate: 5
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/images/favicon.png
+        height: 100
+        width: 100

@@ -1,0 +1,140 @@
+/* General Stuff */
+
+hr {
+    color: #ac9900;
+    background-color: #ac9900;
+    border-color: #ac9900;
+}
+
+p, li, h1, h2, h3, h4, h5, h6 {font-family: "DefaultFont";}
+
+p, li {
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: square;
+}
+
+span.italic {
+    font-style: italic;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+body {
+    background: #0a0e1d;
+}
+
+q:before {content: "\201C";}
+q:after {content: "\201D";}
+
+.fancy-outline {
+    margin: 2.5vmin;
+    padding: 1vmin;
+    border: solid #ac9900 0.45vmin;
+}
+
+.fancy-outline-2 {
+    border: double #ac9900 max(0.65vmin, 6px);
+    padding-right: 2vmin;
+    padding-left: 2vmin;
+    margin-right: 2vmin;
+    margin-left: 2vmin;
+}
+
+.fancy-outline * {
+    color: #ac9900;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: "FancyFont";
+    src: url("/assets/fonts/GrenadierNF.otf");
+}
+
+@font-face {
+    font-family: "TitleFont";
+    src: url("/assets/fonts/engebrechtre ex bd.otf")
+}
+
+@font-face {
+    font-family: "DefaultFont";
+    src: url("/assets/fonts/Code New Roman.woff")
+}
+
+/* Articles */
+
+main {
+    min-height: calc(100vh - 40vmin);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.title-heading {
+    font-family: "TitleFont";
+    font-size: 2rem;
+}
+
+/* Briefings */
+
+.index-excerpts {
+    list-style-type: none;
+    padding: 0;
+}
+
+.index-excerpts > li {
+    margin-bottom: 1vmin;
+}
+
+.index-excerpts > li > h2 {
+    font-family: TitleFont;
+    font-size: max(3vmin, 1.5rem);
+}
+
+.index-excerpts >li > p {
+    font-size: 1.3rem;
+}
+
+/* Post translations */
+
+.small-post-translations {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.small-post-translations * {
+    font-size: 1rem;
+}
+
+.small-post-translations-translations {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.post-details {
+    display: flex;
+}
+
+.post-translations {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding-left: 2vmin;
+}
+
+.post-date {
+    border-right: solid #ac9900 0.15rem;
+    padding-right: 2vmin;
+}
+
+/* Fixing stuff for safari */
+
+* {text-rendering: optimizeLegibility;}

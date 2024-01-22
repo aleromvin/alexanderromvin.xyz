@@ -1,0 +1,135 @@
+/* Colors
+
+#0a0e1d <- Background Blue
+#ac9900 <- Golden Outlines
+
+*/
+
+/* General Stuff */
+
+.banner-alt * {
+    margin: 0;
+    padding: 0;
+}
+
+.banner-alt {
+    margin-top: 0;
+    display: grid;
+    grid-template-areas:
+        'topleft picture'
+        'navigation picture'
+        'bottomleft picture';
+    grid-template-rows: 10vmin 5vmin 10vmin;
+    grid-template-columns: calc(100% - 25vmin) 25vmin;
+}
+
+/* Picture */
+
+.banner-alt-picture > img {
+    height: 100%;
+}
+
+/* Areas */
+
+.banner-alt-topleft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner-alt-bottomleft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: "ArtDeco";
+    src: url("/assets/fonts/ParkLaneNF.otf");
+}
+
+.banner-alt-artdecofont {
+    font-family: ArtDeco;
+    font-weight: lighter;
+}
+
+
+/* Navigation */
+
+.banner-alt-ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner-alt-ul > li {
+    font-family: "FancyFont";
+    font-size: 3vmin;
+    margin-top: 0.4vmin;
+    margin-bottom: 0.4vmin;
+}
+
+.banner-alt-ul > li > a {
+    text-decoration: none;
+}
+
+.banner-alt-ul > li > a:hover {
+    text-decoration: underline;
+}
+
+/* Big Letters */
+
+.banner-alt-name {
+    font-size: 3.9vmin;
+}
+
+.banner-alt-occupation{
+    font-size: 4.5vmin;
+    text-align: center;
+}
+
+/* Nav Lines */
+
+.banner-alt-longline {
+    width: 100%;
+    background: #ac9900;
+    height: 0.45vmin;
+}
+
+.banner-alt-shortline {
+    width: 99%;
+    background: #ac9900;
+    height: 0.45vmin;
+}
+
+/* Grid areas */
+
+.banner-alt-topleft {
+    grid-area: topleft;
+}
+
+.banner-alt-bottomleft{
+    grid-area: bottomleft;
+}
+
+.banner-alt-navigation {
+    grid-area: navigation;
+}
+
+.banner-alt-picture{
+    grid-area: picture;
+}
+
+/* Visibility rules */
+
+@media screen and (min-width: 800px) {
+       .banner-alt {
+          display: none;
+    }
+}

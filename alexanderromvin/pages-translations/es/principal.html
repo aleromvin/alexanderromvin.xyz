@@ -1,0 +1,19 @@
+---
+layout: default
+title: "Principal | Página Oficial de Alexander Romero Vinogradov"
+title-heading: Página Oficial de Alexander Romero Vinogradov
+language: es
+refname: index
+---
+
+<p>¡Saludos, terrícolas! Soy Alexander, y esta página tan super-mega-ultra-hiper-mega molona (y <span class="italic">para nada</span> hortera, al menos si tienes buen gusto...) es mi sitio web personal. En la página principal, donde te encuentras ahora mismo, verás las últimas novedades de mi vida que he considerado lo suficientemente importantes como para publicar algo al respecto. Si además quieres enterarte de algunos de los detalles más jugosos de mi biografía (spoiler: no los vas a encontrar aquí), te invito a visitar la aptamente nombrada sección <a href="/pages-translations/es/sobre-mi.html">Sobre mí</a>. Si deseas más información sobre cómo ponerte en contacto conmigo o escarbar en el archivo de publicaciones... ¡creo que tú mismo puedes apañártelas!</p>
+
+<ul class="index-excerpts">
+    {% assign posts-spanish = site.posts | where:"language","es" %}
+    {% for post in posts-spanish limit:12 %}
+        <li class="fancy-outline-2">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p>{{ post.briefing }}</p>
+        </li>
+    {% endfor %}
+</ul>

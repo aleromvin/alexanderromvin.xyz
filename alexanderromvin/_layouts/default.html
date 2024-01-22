@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+{% include head.html %}
+
+    <body>
+        {% include language-menu.html %}
+        {% include banner.html %}
+        {% include banner-alt.html %}
+
+        <main class="fancy-outline">
+
+            <article>
+                <h1 class="title-heading">
+                    {% if page.title-heading %}
+                        {{ page.title-heading }}
+                    {% else %}
+                        {{ page.title }}
+                    {% endif %}
+                </h1>
+                <hr>
+                {{ content }}
+            </article>
+
+            {% include social.html %}
+
+        </main>
+
+    </body>
+
+</html>

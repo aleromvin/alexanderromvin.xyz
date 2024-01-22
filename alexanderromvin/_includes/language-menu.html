@@ -1,0 +1,19 @@
+<div class="language-menu-container">
+    <div class="language-menu" onclick="">
+        <h1 class="language-button">Languages / Idiomas</h1>
+        <div class="language-selection">
+            <ul>
+            {% for item in site.data.language-menu %}
+                {% if item.language == page.language %}
+                    <li class="language-selection-current-language">{{ item.name }}</li>
+                {% else %}
+                    {% assign translation = site.pages | find_exp:"item2","item2.dir == item.url-infix and item2.refname == page.refname " %}
+                    <li><a href="{{ translation.url }}">{{ item.name }}</a></li>
+                {% endif %}
+            {% endfor %}
+        
+            </ul>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,33 @@
+en:
+  occupation-1: "Mathematician"
+  occupation-2: "& Polymath"
+  home:
+    name: "Home"
+    url: "/"
+  about:
+    name: "About"
+    url: "/about.html"
+  thoughts:
+    name: "Thoughts & Updates"
+    url: "/thoughts.html"
+  contact:
+    name: "Contact"
+    url: "/contact.html"
+  picture-alt: "Me, Myself and I"
+
+es:
+  occupation-1: "Matemático"
+  occupation-2: "y Polímata"
+  home:
+    name: "Principal"
+    url: "/pages-translations/es/principal.html"
+  about:
+    name: "Sobre mí"
+    url: "/pages-translations/es/sobre-mi.html"
+  thoughts:
+    name: "Novedades e Ideas"
+    url: "/pages-translations/es/novedades.html"
+  contact:
+    name: "Contacto"
+    url: "/pages-translations/es/contacto.html"
+  picture-alt: "Mi Ilustrísima Persona"

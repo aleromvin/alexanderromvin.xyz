@@ -1,0 +1,32 @@
+---
+layout: default
+title: "Novedades e Ideas | La Página Oficial de Alexander Romero Vinogradov"
+title-heading: Publicaciones
+language: es
+refname: thoughts
+---
+
+
+<ul>
+    {% assign posts-spanish = site.posts | where:"language","es" %}
+    {% for post in posts-spanish %}
+        {% capture date-spanish %}
+        {{ post.date | date: "%d" }}
+        {% assign m = post.date | date: "%m" | minus: 1 %}
+        {{ site.data.months.es[m] }}
+        {{ post.date | date: "%Y" }}
+        {% endcapture %}
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> ({{ date-spanish | strip }})
+        {% assign translations = site.posts | where_exp:"item","post.refname == item.refname and item.language != post.language" %}
+        <div class="small-post-translations">
+            <h2 class="small-post-translations-disclaimer">{{ site.data.translation-tweaks[page.language].post-translations-disclaimer }}</h1>
+            <ul class="small-post-translations-translations">
+                {% for item in translations %}
+                    <li><a href="{{ item.url }}">{{ site.data.translation-tweaks[item.language].name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

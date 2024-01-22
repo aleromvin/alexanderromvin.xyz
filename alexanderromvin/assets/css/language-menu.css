@@ -1,0 +1,67 @@
+.language-menu-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.language-menu-container * {
+    color: #ac9900;
+    font-size: max(2vmin, 18px);
+}
+
+.language-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.language-button {
+    padding: 0.2vmin;
+    padding-left: 0.4vmin;
+    padding-right: 0.4vmin;
+    border: solid 0.2vmin #ac9900;
+    min-width: 10vmin;
+}
+
+.language-menu:hover .language-button {
+    color: #0a0e1d;
+    background-color: #ac9900;
+    cursor: default;
+}
+
+.language-selection {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    background-color: #0a0e1d;
+    z-index: 1;
+}
+
+.language-menu:hover .language-selection {
+    max-height: 100%;
+}
+
+.language-selection > ul {
+    margin: 0;
+    margin-bottom: 2.5vmin;
+}
+
+.language-selection * {
+    color: #ac9900;
+}
+
+.language-selection > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.language-selection > ul > li {
+    text-decoration-line: underline;
+}
+
+.language-selection > ul > li::marker {
+    content: "\2D54\ ";
+}
+
+.language-selection > ul > li.language-selection-current-language::marker {
+    content: "\2D59\ ";
+}

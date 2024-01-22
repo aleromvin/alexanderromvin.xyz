@@ -1,0 +1,46 @@
+<header class="banner fancy-outline">
+
+    <div class="banner-topleft">
+        <h1 class="banner-name banner-artdecofont">Alexander</h1>
+        <h1 class="banner-surname banner-artdecofont">Romero Vinogradov</h1>
+    </div>
+
+    <div class="banner-topright"></div>
+
+    <div class="banner-bottomleft"></div>
+
+    <div class="banner-bottomright">
+        <h1 class="banner-occupation banner-artdecofont">{{ site.data.banner[page.language].occupation-1 }}</h1>
+        <h1 class="banner-occupation banner-artdecofont">{{ site.data.banner[page.language].occupation-2 }}</h1>
+    </div>
+
+    <div class="banner-navigation-left">
+        <div class="banner-longline"></div>
+
+        <ul class="banner-ul">
+            <li><a href="{{ site.data.banner[page.language].home.url }}">{{ site.data.banner[page.language].home.name }}</a></li>
+            <li><a href="{{ site.data.banner[page.language].about.url }}">{{ site.data.banner[page.language].about.name }}</a></li>
+        </ul>
+
+        <div class="banner-shortline"></div>
+
+    </div>
+
+    <div class="banner-navigation-right">
+
+        <div class="banner-shortline banner-line-rightside"></div>
+
+        <ul class="banner-ul">
+            <li><a href="{{ site.data.banner[page.language].thoughts.url }}">{{ site.data.banner[page.language].thoughts.name }}</a></li>
+            <li><a href="{{ site.data.banner[page.language].contact.url }}">{{ site.data.banner[page.language].contact.name }}</a></li>
+        </ul>
+
+        <div class="banner-longline banner-line-rightside"></div>
+
+    </div>
+
+    <div class="banner-picture">
+        <img src="/assets/images/banner/picture-simplif.svg" alt="{{ site.data.banner[page.language].picture-alt }}">
+    </div>
+
+</header>

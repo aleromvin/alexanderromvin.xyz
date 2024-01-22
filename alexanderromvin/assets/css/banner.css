@@ -1,0 +1,156 @@
+/* Colors
+
+#0a0e1d <- Background Blue
+#ac9900 <- Golden Outlines
+
+*/
+
+/* General Stuff */
+
+.banner * {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    margin-top: 0;
+    display: none;
+    grid-template-areas:
+        'topleft picture topright'
+        'navigation-left picture navigation-right'
+        'bottomleft picture bottomright';
+    grid-template-rows: 10vmin 5vmin 10vmin;
+    grid-template-columns: calc(50% - 12.5vmin) 25vmin calc(50% - 12.5vmin)
+}
+
+/* Picture */
+
+.banner-picture > img {
+    height: 100%;
+}
+
+/* Areas */
+
+.banner-topleft {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-bottomright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: "ArtDeco";
+    src: url("/assets/fonts/ParkLaneNF.otf");
+}
+
+.banner-artdecofont {
+    font-family: ArtDeco;
+    font-weight: lighter;
+}
+
+
+/* Navigation */
+
+.banner-ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner-ul > li {
+    font-family: "FancyFont";
+    font-size: 3vmin;
+    margin-top: 0.4vmin;
+    margin-bottom: 0.4vmin;
+}
+
+.banner-ul > li > a {
+    text-decoration: none;
+}
+
+.banner-ul > li > a:hover {
+    text-decoration: underline;
+}
+
+/* Big Letters */
+
+.banner-name {
+    font-size: min(5vmin);
+}
+
+.banner-surname{
+    font-size: 2.5vmin;
+}
+
+.banner-occupation{
+    font-size: 4vmin;
+    text-align: center;
+}
+
+/* Nav Lines */
+
+.banner-longline {
+    width: 100%;
+    background: #ac9900;
+    height: 0.45vmin;
+}
+
+.banner-shortline {
+    width: 99%;
+    background: #ac9900;
+    height: 0.45vmin;
+}
+
+.banner-line-rightside {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Grid areas */
+
+.banner-topleft {
+    grid-area: topleft;
+}
+
+.banner-topright{
+    grid-area: topright;
+}
+
+.banner-bottomleft{
+    grid-area: bottomleft;
+}
+
+.banner-bottomright{
+    grid-area: bottomright;
+}
+
+.banner-navigation-left{
+    grid-area: navigation-left;
+}
+
+.banner-navigation-right{
+    grid-area: navigation-right;
+}
+
+.banner-picture{
+    grid-area: picture;
+}
+
+/* Visibility rules */
+
+@media screen and (min-width: 800px) {
+       .banner {
+          display: grid;
+    }
+}

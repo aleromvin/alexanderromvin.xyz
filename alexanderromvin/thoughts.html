@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Thoughts & Updates | Alexander Romero Vinogradov's Official Website"
+title-heading: Latest Poasts
+language: en
+refname: thoughts
+---
+
+<ul>
+    {% assign posts-english = site.posts | where:"language","en"%}
+    {% for post in posts-english %}
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_long_string }})
+        {% assign translations = site.posts | where_exp:"item","post.refname == item.refname and item.language != post.language" %}
+        <div class="small-post-translations">
+            <h2 class="small-post-translations-disclaimer">{{ site.data.translation-tweaks[page.language].post-translations-disclaimer }}</h1>
+            <ul class="small-post-translations-translations">
+                {% for item in translations %}
+                    <li><a href="{{ item.url }}">{{ site.data.translation-tweaks[item.language].name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
